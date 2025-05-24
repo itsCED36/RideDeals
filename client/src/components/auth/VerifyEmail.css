@@ -1,0 +1,197 @@
+.verify-email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.verify-email-form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.verify-email-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.prompt-text {
+  margin-bottom: 25px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.code-inputs input {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.code-inputs input:focus {
+  outline: none;
+  border-color: #6366f1;
+  background-color: white;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 12px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #4f46e5;
+}
+
+.submit-button:disabled {
+  background-color: #c7c7c7;
+  cursor: not-allowed;
+}
+
+.resend-button {
+  background-color: transparent;
+  color: #6366f1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.resend-button:hover:not(:disabled) {
+  color: #4f46e5;
+}
+
+.resend-button:disabled {
+  color: #c7c7c7;
+  cursor: not-allowed;
+}
+
+.login-link {
+  margin: 15px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-link a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #999;
+}
+
+.divider hr {
+  flex-grow: 1;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.divider span {
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.google-signin-button {
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.google-signin-button:hover {
+  background-color: #f5f5f5;
+}
+
+.language-selector {
+  text-align: right;
+}
+
+.language-selector select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.error-message {
+  background-color: #fde8e8;
+  color: #e02424;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.success-message {
+  background-color: #def7ec;
+  color: #03543e;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* RTL Support */
+.lang-ar {
+  direction: rtl;
+  text-align: right;
+}
+
+.lang-ar .language-selector {
+  text-align: left;
+}
+
+.lang-ar .verify-email-form {
+  text-align: right;
+}
+
+.lang-ar .google-signin-button {
+  flex-direction: row-reverse;
+}

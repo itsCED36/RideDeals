@@ -1,0 +1,227 @@
+/* PostCar.css */
+.post-car-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.post-car-title {
+  font-size: 2rem;
+  color: #1864ad;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.post-car-subtitle {
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.post-car-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap; /* Allow items to wrap if needed */
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px; /* Ensure minimum width for form groups */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1864ad;
+  box-shadow: 0 0 0 1px rgba(24, 100, 173, 0.2);
+}
+
+/* Rent specific styles */
+.form-group input[name="rentLength"] {
+  border-color: #1864ad;
+  background-color: #f0f7ff;
+}
+
+.form-group input[name="rentLength"]:focus {
+  border-color: #145289;
+  box-shadow: 0 0 0 1px rgba(24, 100, 173, 0.3);
+}
+
+.rent-type-selected {
+  background-color: #f0f7ff;
+  border-color: #1864ad !important;
+  font-weight: 500;
+}
+
+/* Style for the rent duration label */
+.rent-label {
+  color: #1864ad;
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.rent-label::after {
+  content: "Required for rentals";
+  display: inline-block;
+  font-size: 0.7rem;
+  color: #1864ad;
+  background-color: #e6f0ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* Style for the rent duration field container */
+.rent-duration-row {
+  background-color: #f9fbff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #1864ad;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Make sure the rent duration row takes full width */
+.rent-duration-row .form-group {
+  width: 100%;
+}
+
+/* Image upload styles */
+.image-upload-group {
+  margin-bottom: 10px;
+}
+
+.image-upload-group input[type="file"] {
+  padding: 10px 0;
+  width: 100%;
+}
+
+.form-help-text {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.image-preview {
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: #1864ad;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #145289;
+}
+
+.submit-button:disabled {
+  background-color: #7cb3e3;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: #ffecec;
+  color: #d63030;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.success-message {
+  background-color: #e9fce9;
+  color: #2a9d2a;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .post-car-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-group {
+    min-width: 100%; /* Full width on mobile */
+  }
+
+  .post-car-title {
+    font-size: 1.5rem;
+  }
+
+  .submit-button {
+    padding: 12px;
+  }
+
+  /* Ensure the rent field has proper spacing on mobile */
+  .form-group label[for="rentLength"] {
+    margin-top: 10px;
+  }
+
+  /* Adjust rent duration row padding on mobile */
+  .rent-duration-row {
+    padding: 10px;
+  }
+}

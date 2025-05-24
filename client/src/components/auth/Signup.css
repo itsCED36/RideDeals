@@ -1,0 +1,320 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Light grey background */
+  padding: 20px;
+  padding-top: 75px;
+}
+
+.signup-form {
+  background-color: #ffffff; /* White form background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-form h2 {
+  margin-bottom: 24px;
+  color: #1c1e21; /* Dark text color */
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #1877f2; /* Changed label color to blue */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccd0d5; /* Light grey border */
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f0f0f0; /* Changed background to light gray */
+  color: black; /* Changed text color to black */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  min-width: 0;
+}
+
+.form-group input:focus {
+  border-color: #1877f2; /* Blue border on focus */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+.form-group input.input-error,
+.form-group select.input-error {
+  border-color: red;
+}
+
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-container input[type="password"],
+.password-input-container input[type="text"] {
+  width: 100%; /* Ensure input takes full width */
+  padding-right: 40px; /* Make space for the icon */
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em; /* Adjust icon size */
+  color: #555; /* Icon color */
+  padding: 0; /* Remove padding if any */
+}
+
+.field-error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 4px;
+  text-align: left; /* Ensure it aligns with the field */
+}
+
+.password-strength-meter {
+  height: 8px; /* Height of the strength bar container */
+  background-color: #eee; /* Light grey background for the meter */
+  border-radius: 4px;
+  margin-top: 8px;
+  overflow: hidden; /* Ensures the inner bar doesn't overflow the rounded corners */
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0%; /* Initial width */
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.strength-0 {
+  width: 20%;
+  background-color: #ff4d4f;
+} /* Very Weak - Red */
+.strength-1 {
+  width: 40%;
+  background-color: #ffa500;
+} /* Weak - Orange */
+.strength-2 {
+  width: 60%;
+  background-color: #ffd700;
+} /* Medium - Yellow */
+.strength-3 {
+  width: 80%;
+  background-color: #90ee90;
+} /* Strong - Light Green */
+.strength-4 {
+  width: 100%;
+  background-color: #008000;
+} /* Very Strong - Green */
+
+.name-fields {
+  display: flex;
+  gap: 8px; /* Reduced gap */
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.name-fields .form-group {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1877f2; /* Blue button */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 8px; /* Add some space above the button */
+}
+
+.submit-button:hover {
+  background-color: #166fe5; /* Darker blue on hover */
+}
+
+.submit-button:disabled {
+  background-color: #a0c3f7; /* Lighter blue when disabled */
+  cursor: not-allowed;
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #606770;
+}
+
+.login-link a {
+  color: #1877f2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #8a8d91; /* Light grey for divider text */
+}
+
+.divider hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid #ccd0d5;
+}
+
+.divider span {
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.google-signup-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  color: #4285f4; /* Google blue */
+  border: 1px solid #dadce0; /* Google button border */
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+.google-signup-button:hover {
+  background-color: #f8f9fa;
+  border-color: #c6cacf;
+}
+
+/* Add styles for Google icon if you include one */
+
+.language-selector {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.language-selector select {
+  background: none;
+  border: none;
+  color: #1877f2;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.language-selector select:focus {
+  outline: none;
+}
+
+.error-message {
+  color: #fa383e; /* Red for error messages */
+  background-color: #ffebe6; /* Light red background */
+  border: 1px solid #fa383e;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: center; /* Center align general errors */
+}
+
+/* Responsive Styles */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .signup-form {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  .signup-form h2 {
+    font-size: 22px;
+  }
+
+  .name-fields {
+    flex-direction: column; /* Stack name fields vertically */
+    gap: 16px; /* Keep gap consistent */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 5px; /* Further reduce container padding */
+  }
+
+  .signup-form {
+    padding: 15px; /* Further reduce form padding */
+    box-shadow: none; /* Optional: remove shadow on small screens */
+    border-radius: 0; /* Optional: remove border radius for edge-to-edge feel */
+  }
+
+  .signup-form h2 {
+    font-size: 18px; /* Slightly smaller heading */
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    font-size: 13px; /* Slightly smaller labels */
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .submit-button,
+  .google-signup-button {
+    padding: 10px 12px; /* Adjust padding for better touch */
+    font-size: 14px;
+  }
+
+  .submit-button {
+    font-weight: 500; /* Slightly less bold button text */
+  }
+
+  .login-link {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .divider {
+    margin: 15px 0;
+  }
+
+  .divider span {
+    font-size: 10px;
+  }
+}

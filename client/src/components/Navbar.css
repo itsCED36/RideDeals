@@ -1,0 +1,312 @@
+/* Navbar.css */
+/* Top blue band styling */
+.top-blue-band {
+  background-color: #0c4f91; /* Deep blue color matching the image */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 18px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.band-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  color: white;
+  font-weight: bold;
+}
+
+.band-content span {
+  font-size: 14px;
+}
+
+/* Navbar main styling */
+.navbar {
+  background-color: #fff; /* Or your desired background color */
+  height: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  position: sticky; /* Keeps it at the top */
+  top: 0;
+  left: 0; /* Ensure it starts from the left edge */
+  right: 0; /* Ensure it stretches to the right edge */
+  width: 100%; /* Explicitly set width to 100% */
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.navbar-logo {
+  color: #000000; /* Updated to theme black color */
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  /* Revert margin to push menu right, leaving space for logo */
+  margin-left: 80px; /* Or adjust as needed */
+  margin-right: auto; /* Pushes nav-right to the end */
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #000000; /* Updated to theme black color */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.nav-links:hover {
+  color: #1864ad; /* Updated to theme blue link hover color */
+  border-bottom: 3px solid #1864ad; /* Updated to theme blue border */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Increased from 25px to create more space */
+}
+
+.nav-icon-button {
+  background: none;
+  border: none;
+  color: #555; /* Icon color */
+  cursor: pointer;
+  font-size: 1.5rem; /* Icon size */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add styling for the custom icon images */
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-icon-button:hover {
+  color: #007bff; /* Icon hover color */
+}
+
+.profile-section {
+  position: relative;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 5px); /* Position below the icon with a small gap */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  padding: 8px 0; /* Padding around the group of items */
+  min-width: 180px; /* Wider dropdown */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-dropdown button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+}
+
+.profile-dropdown button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Styling for dropdown items as links or buttons */
+.profile-dropdown-item {
+  display: block; /* Make items take full width */
+  background: none;
+  border: none;
+  padding: 10px 15px; /* Consistent padding */
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  color: #333; /* Dark grey text */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 0.9rem; /* Slightly smaller font */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.profile-dropdown-item:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+  color: #007bff; /* Blue text on hover */
+}
+
+.nav-button {
+  padding: 6px 14px; /* Reduced padding from 8px 20px */
+  border-radius: 4px;
+  background-color: #007bff; /* Button background */
+  color: white;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+}
+
+.nav-button:hover {
+  background-color: #0056b3; /* Button hover background */
+}
+
+.language-selector {
+  position: relative; /* Needed for absolute positioning of the arrow */
+}
+
+.language-selector select {
+  /* Remove default browser styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Explicitly set desired styles */
+  background-color: transparent; /* Or #FFFFFF if you prefer a white background */
+  border: none !important; /* Keep this just in case */
+  padding: 10px 10px;
+  padding-right: 32px; /* Add space for the arrow */
+  padding-bottom: 0; /* Remove bottom padding */
+  color: #1864ad; /* Theme blue text color */
+  font-weight: 600; /* Make text bold like links */
+  cursor: pointer;
+  outline: none;
+
+  /* Remove margin-bottom if it's causing layout issues */
+  margin-bottom: 24px; /* Keep 24px margin for alignment with other logos */
+
+  /* Add vertical-align to help align with other inline-flex items */
+  vertical-align: middle;
+}
+
+/* Custom Dropdown Arrow - Positioned Right */
+.language-selector::after {
+  content: none;
+}
+
+/* RTL adjustments */
+.navbar.lang-ar .navbar-container {
+  direction: rtl;
+}
+
+.navbar.lang-ar .nav-menu {
+  /* Revert RTL margin adjustments if necessary */
+  margin-left: auto;
+  margin-right: 80px; /* Mirror LTR margin */
+}
+
+.navbar.lang-ar .profile-dropdown {
+  right: auto;
+  left: 0;
+}
+
+.navbar.lang-ar .profile-dropdown button {
+  text-align: right;
+}
+
+/* Responsive adjustments */
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 960px) {
+  .navbar-container {
+    padding: 0 20px; /* Reduce padding */
+  }
+
+  .nav-menu {
+    margin-left: 40px; /* Reduce space */
+  }
+
+  .nav-right {
+    gap: 15px; /* Reduce gap */
+  }
+
+  .navbar-logo {
+    font-size: 1.6rem; /* Slightly smaller logo */
+  }
+
+  .nav-links {
+    padding: 0 0.8rem;
+  }
+}
+
+/* Small screens (e.g., mobile) */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 15px; /* Further reduce padding */
+  }
+
+  .nav-menu {
+    /* Hide the main menu on small screens - requires JS for hamburger menu */
+    display: none;
+  }
+
+  .nav-right {
+    gap: 10px; /* Further reduce gap */
+    /* Ensure language selector doesn't push things too far */
+    margin-left: auto; /* Push right content to the end */
+  }
+
+  .navbar-logo {
+    font-size: 1.5rem; /* Smaller logo */
+    margin-right: auto; /* Push logo left */
+  }
+
+  .language-selector select {
+    margin-bottom: 0; /* Remove bottom margin on mobile */
+    padding: 4px 6px;
+  }
+
+  /* Add styles for a mobile menu icon/button if implemented */
+  /* .mobile-menu-icon { display: block; } */
+}
+
+/* Add responsive RTL adjustments if needed */
+@media (max-width: 768px) {
+  .navbar.lang-ar .nav-right {
+    margin-left: 0;
+    margin-right: auto; /* Push right content to the end in RTL */
+  }
+  .navbar.lang-ar .navbar-logo {
+    margin-right: 0;
+    margin-left: auto; /* Push logo right in RTL */
+  }
+}
